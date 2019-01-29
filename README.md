@@ -1,6 +1,16 @@
 # isu-corp-reservation-dgonzalez
 API Reservation
 
+**
+ * Expert system of management of reservations of places of interest, this
+ * application is made based on the requirements and points of pain exposed by
+ * the Client. As part of the technical test.
+ *
+ * @version 1.00.0
+ * @autor David Gonzalez
+ * @client ISUCorp**
+
+
 # Spring Boot, MySQL, JPA, Hibernate Rest API
 
 Build Restful  API for a reservation application using Spring Boot, Mysql, JPA and Hibernate.
@@ -33,7 +43,7 @@ git clone https://github.com/davisgon/isu-corp-reservation-dgonzalez.git
 **3. Port**
       8280
 
-**4. Documentation
+**4. Documentation**
 
   http://localhost:8280/swagger-ui.html#/reservation-controller
 
