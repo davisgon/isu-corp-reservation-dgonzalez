@@ -1,6 +1,6 @@
-# Spring Boot, MySQL, JPA, Hibernate Rest API Tutorial
+# Spring Boot, MySQL, JPA, Hibernate Rest API
 
-Build Restful CRUD API for a simple Note-Taking application using Spring Boot, Mysql, JPA and Hibernate.
+Build Restful  API for a reservation application using Spring Boot, Mysql, JPA and Hibernate.
 
 ## Requirements
 
@@ -15,32 +15,25 @@ Build Restful CRUD API for a simple Note-Taking application using Spring Boot, M
 **1. Clone the application**
 
 ```bash
-git clone https://github.com/callicoder/spring-boot-mysql-rest-api-tutorial.git
+git clone https://github.com/davisgon/isu-corp-reservation-dgonzalez.git
 ```
 
-**2. Create Mysql database**
-```bash
-create database reservation
-```
+**2. Execute**
+    isu-corp-reservation-dgonzalezjava/target/  -jar reservation-1.0.0.jar
 
-**3. Change mysql username and password as per your installation**
+    if no exist
+    ```bash
+    mvn package
+    java -jar target/reservation-1.0.0.jar
+    ```
 
-+ open `src/main/resources/application.properties`
+**3. Port**
+      8280
 
-+ change `spring.datasource.username` and `spring.datasource.password` as per your mysql installation
+**4. Documentation
 
-**4. Build and run the app using maven**
+  http://localhost:8280/swagger-ui.html#/reservation-controller
 
-```bash
-mvn package
-java -jar target/reservation-1.0.0.jar
-```
-
-Alternatively, you can run the app without packaging it using -
-
-```bash
-mvn spring-boot:run
-```
 
 The app will start running at <http://localhost:8280>.
 
@@ -52,6 +45,13 @@ You can test them using postman or any other rest client.
 
 ## Learn more
 
-You can find the tutorial for this application on my blog -
+You can find the tutorial for this application**
+https://docs.google.com/document/d/1khHlvXUtNZnofK2OzE34TM7-BWB7askxESD7ZhBcJwQ/edit?usp=sharing
 
-<https://www.callicoder.com/spring-boot-rest-api-tutorial-with-mysql-jpa-hibernate/>
+**NOTE**
+If you change the reservation3 database, you must manually execute the store procedure, here the ddl, the idea is to store a copy in the contact_backup table to back up the information of our clients
+
+CREATE DEFINER = `root` @`% `PROCEDURE` reservation3`.`prbackupcontact` (IN pidContact INT, IN pName VARCHAR (255), IN pPhoneNumber VARCHAR (50), IN pBirthDate DATE, IN pImage VARCHAR (255), IN pidTypeContact INT)
+BEGIN
+insert into reservation.contactbackup VALUES (pidContact, pName, pPhoneNumber, pBirthDate, pimage, pidTypeContact);
+END;
