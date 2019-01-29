@@ -1,0 +1,17 @@
+com\dgonzalez\reservation\model\Reservation.class
+com\dgonzalez\reservation\internationalizationConfiguration.class
+com\dgonzalez\reservation\model\ContactType.class
+com\dgonzalez\reservation\controller\Contact_backupController.class
+com\dgonzalez\reservation\repository\Contact_backupRepository.class
+com\dgonzalez\reservation\controller\IndexController.class
+com\dgonzalez\reservation\repository\ReservationRepository.class
+com\dgonzalez\reservation\controller\ReservationController.class
+com\dgonzalez\reservation\repository\ContactRepository.class
+com\dgonzalez\reservation\controller\ContactTypeController.class
+com\dgonzalez\reservation\model\Contact_backup.class
+com\dgonzalez\reservation\exception\ResourceNotFoundException.class
+com\dgonzalez\reservation\model\Contact.class
+com\dgonzalez\reservation\controller\ContactController.class
+com\dgonzalez\reservation\repository\ContactTypeRepository.class
+com\dgonzalez\reservation\SwaggerConfig.class
+com\dgonzalez\reservation\Application.class
